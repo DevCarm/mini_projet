@@ -44,5 +44,14 @@ class RegistrationController extends AbstractController
         return $this->render('registration/register.html.twig', [
             'registrationForm' => $form->createView(),
         ]);
+
+    }
+    #[Route('/admin', name: 'admin')]
+    public function backend(): Response {
+        return $this->render('back/index.html.twig');
+    }
+    #[Route('/user', name: 'user')]
+    public function frontend(): Response {
+        return $this->render('user.html.twig');
     }
 }

@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+        <img src="<img src="{{ asset('img/logo@2x-1-po9y2381cxf4kqpj3j15s0k3jx1lnxtorb3wes26pa.png')}}" title="logo@2x" alt="logo@2x" data-src="https://www.universalmedica.com/wp-content/uploads/elementor/thumbs/logo@2x-1-po9y2381cxf4kqpj3j15s0k3jx1lnxtorb3wes26pa.png" width="270" height="75" class="d-inline-block align-top" alt="">
+        Universal Medica
+    </a>
+
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+
+        </ul>
+        <ul class="form-inline my-2 my-lg-0 navbar-nav mr-auto">
+            {% if not app.user %}
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('app_login') }}">Connexion</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('app_register') }}">Inscription</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('app_logout') }}">Déconnexion</a>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+</nav>
