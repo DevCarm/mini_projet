@@ -7,7 +7,6 @@
     {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
 
     {% block stylesheets %}
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         {{ encore_entry_link_tags('app') }}
     {% endblock %}
 
@@ -19,7 +18,8 @@
 {% include 'nav.html.twig' %}
 {% block body %}
     <h1>FrontEnd</h1>
-
+    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed libero mattis, efficitur ex eget, tincidunt nunc. Nunc nisi erat, consequat non venenatis vel, volutpat at odio. Nam iaculis velit in urna sollicitudin consequat. Nullam mollis auctor ultrices. Curabitur ut semper massa. In hac habitasse platea dictumst. In eget velit eget erat sagittis pretium sed quis mauris. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut in ullamcorper erat. Suspendisse pharetra purus metus, eu efficitur odio gravida sit amet. Etiam vel condimentum libero. Sed sodales felis vel consequat tristique.</p>
+    <p class="lead">Fusce non leo quis nibh placerat tincidunt in luctus orci. Nam sed eros viverra, luctus turpis sagittis, molestie elit. Ut dapibus lorem lorem. Phasellus a urna sagittis, consectetur ante vel, hendrerit sem. Donec consectetur semper nibh at sodales. Maecenas gravida nisl sed varius lobortis. Ut malesuada accumsan libero venenatis tincidunt. Fusce convallis sapien ut ante elementum, eu lobortis enim sodales. Maecenas sodales condimentum erat venenatis bibendum. Nullam enim dolor, molestie at aliquam sit amet, efficitur eu odio. Quisque dignissim ante a rutrum faucibus. Praesent ultricies felis in odio tempus aliquet. Nulla sapien ipsum, porta id vehicula in, interdum in urna. Duis faucibus, felis sed feugiat ultricies, purus mi molestie tortor, ac consequat lectus risus a arcu. Aenean varius elementum maximus.</p>
 {% endblock %}
 </body>
 </html>

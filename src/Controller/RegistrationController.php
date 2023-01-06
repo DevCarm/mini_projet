@@ -46,9 +46,16 @@ class RegistrationController extends AbstractController
         ]);
 
     }
-    #[Route('/admin', name: 'admin')]
-    public function backend(): Response {
-        return $this->render('back/index.html.twig');
+    /**
+     * @Route("/admin", name="admin", methods={"GET"})
+     */
+    public function index(EntityManagerInterface $em): Response
+    {
+        $Users = $em->getRepository(User::class)->findAll();
+
+        return $this->render('back/index.html.twig', [
+            'users' => $Users,
+        ]);
     }
     #[Route('/user', name: 'user')]
     public function frontend(): Response {
